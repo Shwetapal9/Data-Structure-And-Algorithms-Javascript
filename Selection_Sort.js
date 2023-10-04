@@ -15,7 +15,8 @@
 let arr = [90, 80, 70, 50, 20, 100, 10, 40];
 let n = arr.length;
 
-let selectionSort = function (arr, n) {
+// Selection sort in ascending order
+let selectionSortAsc = function (arr, n) {
   for (let i = 0; i < n; i++) {
     let minIdx = i;
     for (let j = i + 1; j < n; j++) {
@@ -29,4 +30,23 @@ let selectionSort = function (arr, n) {
   }
   return arr;
 };
-console.log(selectionSort(arr, n));
+
+// Selection sort for Descending order
+
+function selectionSortDesc(arr, n) {
+  for (let i = 0; i < n; i++) {
+    let maxId = i;
+    for (let j = i; j < n; j++) {
+      if (arr[j] > arr[maxId]) {
+        maxId = j;
+      }
+    }
+    let temp = arr[maxId];
+    arr[maxId] = arr[i];
+    arr[i] = temp;
+  }
+  return arr;
+}
+
+console.log(selectionSortAsc(arr, n));
+console.log(selectionSortDesc(arr, n));
