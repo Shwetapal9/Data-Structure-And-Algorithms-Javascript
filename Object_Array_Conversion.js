@@ -24,6 +24,10 @@ const zoo = {
   lion: "Shweta",
   panda: "You",
 };
+
+// keys as array elements
 console.log(Object.keys(zoo)); //[ 'lion', 'panda' ]
+
+// values as array elements
 console.log(Object.values(zoo)); //[ 'Shweta', 'You' ]
 console.log(Object.entries(zoo)); //[ [ 'lion', 'Shweta' ], [ 'panda', 'You' ] ]
