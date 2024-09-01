@@ -16,7 +16,7 @@ const flatten = (obj, prefix) => {
   let output = {};
 
   for (let k in obj) {
-    console.log("key:"+ k,"value:", obj[k]);
+    console.log("key:" + k, "value:", obj[k]);
     let val = obj[k];
     console.log(prefix);
     //new key
@@ -43,6 +43,17 @@ const flatten = (obj, prefix) => {
   return output; //{ A: '12', B: 23, 'C.P': 23, 'C.O.L': 56, 'C.Q.0': 1, 'C.Q.1': 2 }
 };
 
-
-
 console.log(flatten(nested));
+
+const input = [
+  { target: "abc" },
+  { target: "abc" },
+  { target: "def" },
+  { target: "ghi" },
+];
+
+const output = [
+  { target: "abc", count: 2 },
+  { target: "def", count: 1 },
+  { target: "ghi", count: 1 },
+];
